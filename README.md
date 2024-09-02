@@ -4,7 +4,7 @@ Write a Python program using OpenCV that performs the following tasks:
 
 i) Read and Display an Image.
 
-ii) 	Draw Shapes and Add Text.
+ii) Draw Shapes and Add Text.
 
 iii) Image Color Conversion.
 
@@ -52,52 +52,173 @@ o	Flip the original image vertically and display it.
 o	Save the final modified image to your local directory.
 
 
-##### Program:
-### Developed By:
-### Register Number: 
+## Program:
+### i)Read and Display an Image
+```python
+import cv2
 
+# Path to the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Display the image
+cv2.imshow('Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+### ii)Draw Shapes and Add Text
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Draw a rectangle
+cv2.rectangle(image, (50, 50), (200, 200), (0, 255, 0), 2)
+
+# Draw a circle
+cv2.circle(image, (300, 300), 50, (255, 0, 0), 2)
+
+# Add text
+cv2.putText(image, 'OpenCV', (100, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+
+# Display the modified image
+cv2.imshow('Shapes and Text', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+### iii)Image Color Conversion
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Convert to grayscale
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow('Grayscale Image', gray_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# Convert to HSV
+hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow('HSV Image', hsv_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+
+### iv)Access and Manipulate Image Pixels
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Access pixel at (100, 100)
+pixel = image[100, 100]
+print(f'Pixel value at (100, 100): {pixel}')
+
+# Modify pixel value
+image[100, 100] = [0, 0, 255]  # Set pixel to red
+
+# Display the modified image
+cv2.imshow('Modified Pixel Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+### v)Image Resizing
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Resize image to 300x300
+resized_image = cv2.resize(image, (300, 300))
+cv2.imshow('Resized Image', resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+### vi)Image Cropping
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Crop the image
+cropped_image = image[50:200, 50:200]
+cv2.imshow('Cropped Image', cropped_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+### vii)Image Flipping
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Flip image horizontally
+flipped_image = cv2.flip(image, 1)
+cv2.imshow('Flipped Image', flipped_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+### viii)Write and Save the Modified Image
+```python
+import cv2
+
+# Read the image
+image_path = r'C:\Users\admin\Downloads\WhatsApp Image 2024-07-02 at 3.28.06 PM.jpeg'
+image = cv2.imread(image_path)
+
+# Save the modified image
+cv2.imwrite('modified_image.jpg', image)
+print('Image saved as modified_image.jpg')
+```
+
+### Developed By:Gokkul M
+### Register Number: 212223240039
 
 ## Output:
 
 ### i)Read and Display an Image
-
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/b6383364-0f8e-496c-b6ef-aa830b3244d5)
 
 ### ii)Draw Shapes and Add Text
-
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/2d896b77-ece3-4db7-952b-6ef3b747da7c)
 
 ### iii)Image Color Conversion
-
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/bfccabae-1af2-41f5-a512-9fe12ae7636b)
 
 ### iv)Access and Manipulate Image Pixels
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/005c5fdc-2dd4-4b64-af87-1339a2134244)
 
 ### v)Image Resizing
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/4e085da6-edff-4026-9b7d-3eb3f3ea001f)
 
 ### vi)Image Cropping
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/85495c6a-83d5-42f2-ae53-b3c497180092)
 
 ### vii)Image Flipping
-<br>
-<br>
+![image](https://github.com/user-attachments/assets/0edff076-ab1d-4070-9ba2-3e3bc3efb019)
 
 ### viii)Write and Save the Modified Image
-<br>
-<br>
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/5a3b1bef-81a8-4e47-a428-8133dd7e0d24)
 
 ## Result:
 Thus the images are read, displayed, and written ,and color conversion was performed  successfully using the python program.
